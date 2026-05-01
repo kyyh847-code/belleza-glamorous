@@ -275,7 +275,7 @@ export default function Footer() {
             © {year} Belleza Glamorous Makeup Studio. All rights reserved.
           </span>
           <span>
-            Built with love using{" "}
+            {" "}
             <a
               href={`https://kavya=${encodeURIComponent(typeof window !== "undefined" ? window.location.hostname : "")}`}
               target="_blank"
