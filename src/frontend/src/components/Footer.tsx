@@ -277,13 +277,13 @@ export default function Footer() {
           <span>
             Built with love using{" "}
             <a
-              href={`https://caffeine.ai?utm_source=caffeine-footer&utm_medium=referral&utm_content=${encodeURIComponent(typeof window !== "undefined" ? window.location.hostname : "")}`}
+              href={`https://kavya=${encodeURIComponent(typeof window !== "undefined" ? window.location.hostname : "")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="transition-smooth hover:text-primary font-semibold"
               style={{ color: "#FF69B4" }}
             >
-              caffeine.ai
+            Designed BY Kavya Chaudhary
             </a>
           </span>
         </div>
