@@ -1,0 +1,255 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-display: "Fraunces", serif;
+    --font-body: "DM Sans", sans-serif;
+    --font-mono: "Geist Mono", monospace;
+    --radius: 1.5rem;
+
+    --background: 0.99 0.005 60;
+    --foreground: 0.18 0.06 330;
+    --card: 1.0 0.0 0;
+    --card-foreground: 0.18 0.06 330;
+    --popover: 1.0 0.0 0;
+    --popover-foreground: 0.18 0.06 330;
+
+    --primary: 0.6 0.22 340;
+    --primary-foreground: 1.0 0.0 0;
+
+    --secondary: 0.96 0.02 340;
+    --secondary-foreground: 0.25 0.07 330;
+    --muted: 0.97 0.01 60;
+    --muted-foreground: 0.45 0.05 330;
+
+    --accent: 0.9 0.08 340;
+    --accent-foreground: 0.25 0.07 330;
+
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 1.0 0.0 0;
+
+    --border: 0.9 0.03 340;
+    --input: 0.93 0.02 340;
+    --ring: 0.6 0.22 340;
+
+    --chart-1: 0.72 0.18 340;
+    --chart-2: 0.63 0.22 330;
+    --chart-3: 0.82 0.14 15;
+    --chart-4: 0.58 0.09 350;
+    --chart-5: 0.67 0.16 325;
+
+    --sidebar: 1.0 0.0 0;
+    --sidebar-foreground: 0.18 0.06 330;
+    --sidebar-primary: 0.6 0.22 340;
+    --sidebar-primary-foreground: 1.0 0.0 0;
+    --sidebar-accent: 0.9 0.08 340;
+    --sidebar-accent-foreground: 0.25 0.07 330;
+    --sidebar-border: 0.9 0.03 340;
+    --sidebar-ring: 0.6 0.22 340;
+
+    --gradient-primary: linear-gradient(
+      135deg,
+      #ff1493 0%,
+      #ff69b4 60%,
+      #ffb6d9 100%
+    );
+    --gradient-subtle: linear-gradient(135deg, #ffffff 0%, #fff0f5 100%);
+    --glow-pink: 0 0 30px rgba(255, 105, 180, 0.35), 0 0 60px
+      rgba(255, 182, 217, 0.2);
+    --glow-accent: 0 0 40px rgba(255, 105, 180, 0.25);
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    background-color: #ffffff;
+  }
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("/assets/fonts/Fraunces.woff2") format("woff2");
+  font-weight: 400 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("/assets/fonts/DMSans.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url("/assets/fonts/GeistMono.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .glassmorphic {
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(255, 105, 180, 0.25);
+  }
+
+  .glass-card {
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 105, 180, 0.3);
+    box-shadow: 0 8px 32px rgba(255, 105, 180, 0.1), inset 0 1px 0
+      rgba(255, 255, 255, 1);
+  }
+
+  .glass-light {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(255, 182, 217, 0.4);
+  }
+
+  .glow-pink {
+    box-shadow: 0 0 30px rgba(255, 105, 180, 0.45), 0 0 60px
+      rgba(255, 105, 180, 0.2);
+  }
+
+  .glow-soft {
+    box-shadow: 0 0 20px rgba(255, 182, 217, 0.5), 0 0 40px
+      rgba(255, 105, 180, 0.15);
+  }
+
+  .glow-accent {
+    box-shadow: var(--glow-accent);
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #ff1493 0%, #ff69b4 50%, #ffb6d9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-subtle {
+    background: var(--gradient-subtle);
+  }
+
+  .gradient-hero {
+    background: linear-gradient(
+      135deg,
+      #ffffff 0%,
+      #fff0f5 40%,
+      #ffe4ef 70%,
+      #fffaf0 100%
+    );
+  }
+
+  .gradient-pink-radial {
+    background: radial-gradient(
+      ellipse at center,
+      rgba(255, 105, 180, 0.2) 0%,
+      rgba(255, 182, 217, 0.1) 50%,
+      transparent 70%
+    );
+  }
+
+  .text-serif-display {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  .text-serif-accent {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  .border-subtle {
+    border-color: rgba(255, 182, 217, 0.3);
+  }
+
+  .shadow-elevated {
+    box-shadow: 0 8px 32px rgba(255, 105, 180, 0.15), 0 2px 8px
+      rgba(255, 105, 180, 0.05);
+  }
+
+  .shadow-subtle {
+    box-shadow: 0 2px 8px rgba(255, 105, 180, 0.1);
+  }
+
+  .shadow-luxury {
+    box-shadow: 0 20px 60px rgba(255, 105, 180, 0.2), 0 4px 16px
+      rgba(255, 105, 180, 0.08);
+  }
+
+  .section-alt {
+    background: linear-gradient(180deg, #fff5f9 0%, #fff0f5 100%);
+  }
+
+  .section-white {
+    background: #ffffff;
+  }
+
+  .sparkle-bg {
+    background-image: radial-gradient(
+        circle at 20% 20%,
+        rgba(255, 182, 217, 0.35) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 80% 80%,
+        rgba(255, 105, 180, 0.2) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 50% 50%,
+        rgba(255, 240, 247, 0.9) 0%,
+        transparent 80%
+      );
+  }
+
+  .pink-blob {
+    background: radial-gradient(
+      ellipse,
+      rgba(255, 182, 217, 0.3) 0%,
+      rgba(255, 105, 180, 0.1) 40%,
+      transparent 70%
+    );
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff0f5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff1493, #ff69b4, #ffb6d9);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff1493;
+}

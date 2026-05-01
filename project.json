@@ -1,0 +1,28 @@
+{
+  "overview": "Belleza Glamorous Makeup Studio is a premium luxury 3D-animated website for a professional bridal makeup artist based in Vadodara, Gujarat. Features full Three.js 3D animations, glassmorphism UI, pinkish-whitish theme with glow effects, celebrity work showcase, gallery, appointment booking, Indian reviews, FAQ, and map section.",
+  "features": [
+    "Full 3D animated hero section with floating particles and orbs",
+    "Premium pinkish-whitish glassmorphism UI with glow effects",
+    "Celebrity work showcase with animated certificate highlight",
+    "Complete services section with 3D animated cards",
+    "Gallery carousel with 10 portfolio photos",
+    "Indian client testimonials with animated cards",
+    "Appointment booking form with date/time selection",
+    "Why Choose Us section with animated stats",
+    "FAQ accordion section",
+    "Google Maps location section",
+    "Floating WhatsApp/Call and Instagram buttons",
+    "Smooth scroll navigation with sticky header"
+  ],
+  "category": "portfolio-business",
+  "tags": [
+    "makeup-artist",
+    "bridal",
+    "3d-animations",
+    "luxury",
+    "portfolio",
+    "india",
+    "glassmorphism"
+  ],
+  "last_updated": "2026-05-01T15:23:22.498Z"
+}
